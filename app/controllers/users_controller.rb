@@ -1,4 +1,8 @@
 class UsersController < ApplicationController
+  before_action :authorize, only: [:secret]
+
+  def secret
+  end
 
   def new
     @user = User.new
