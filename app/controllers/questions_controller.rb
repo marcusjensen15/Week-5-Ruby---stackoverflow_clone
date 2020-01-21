@@ -1,24 +1,22 @@
 class QuestionsController < ApplicationController
-  before_action :authorize, only: [:secret]
-
-  def secret
-    # @users.authorize
-  end
+  before_action :authorize, only: [:index, :show]
 
   def index
-    # Code for listing all albums goes here.
+    # Code for listing all users goes here.
+    # @user = User.find(params[:user_params])
+    # session[:user_id] = @user.id
     @questions= Question.all
     :index
   end
 
   # def new
-  #   # Code for new album form goes here.
+  #   # Code for new user form goes here.
   #   @recipe = Recipe.new
   #   :new
   # end
   #
   # def create
-  #   # Code for creating a new album goes here.
+  #   # Code for creating a new user goes here.
   #   @recipe = Recipe.new(recipe_params)
   #   if @recipe.save
   #     redirect_to root_path
@@ -28,13 +26,13 @@ class QuestionsController < ApplicationController
   # end
   #
   # def edit
-  #   # Code for edit album form goes here.
+  #   # Code for edit user form goes here.
   #   @recipe = Recipe.find(params[:id])
   #   render :edit
   # end
   #
   # def show
-  #   # Code for showing a single album goes here.
+  #   # Code for showing a single user goes here.
   #
   # @recipe = Recipe.find(params[:id])
   #
@@ -58,7 +56,7 @@ class QuestionsController < ApplicationController
   # end
   #
   # def update
-  #   # Code for updating an album goes here.
+  #   # Code for updating an user goes here.
   #
   #   @recipe= Recipe.find(params[:id])
   #     if @recipe.update(recipe_params)
@@ -69,7 +67,7 @@ class QuestionsController < ApplicationController
   # end
   #
   # def destroy
-  #   # Code for deleting an album goes here.
+  #   # Code for deleting an user goes here.
   #   @recipe = Recipe.find(params[:id])
   #   @recipe.destroy
   #   redirect_to root_path

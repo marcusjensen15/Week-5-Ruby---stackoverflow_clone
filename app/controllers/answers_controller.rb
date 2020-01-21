@@ -1,4 +1,5 @@
 # class RecipesController < ApplicationController
+# before_action :authorize, only: [:index, :show]
 #
 #   def index
 #     # Code for listing all albums goes here.
