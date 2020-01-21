@@ -1,0 +1,6 @@
+Many to Many routing question:
+https://www.ruby-forum.com/t/many-to-many-relationship-with-restful-routes/182482/2
+
+
+RESTful Many to Many
+https://ngauthier.com/2010/11/restful-many-to-many-relationships-in-rails.html
