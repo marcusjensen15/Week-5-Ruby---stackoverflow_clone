@@ -16,12 +16,15 @@ class AnswersController < ApplicationController
 
   def create
     # Code for creating a new answer goes here.
+    @question = Question.find(params[:id])
+    # binding.pry
     @answer = Answer.new(answer_params)
     if @answer.save
       redirect_to questions_path
     else
       render :new
     end
+  end
 
     def edit
       # Code for edit answer form goes here.
