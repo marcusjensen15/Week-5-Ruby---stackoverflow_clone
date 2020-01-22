@@ -1,0 +1,10 @@
+<h1> Answer: </h1>
+
+<%= render "layouts/errors", :object => @answer %>
+
+<%= form_for [@question, @answer] do |f| %>
+  <%= f.label :answer_field %>
+  <%= f.text_area :answer_field %>
+  <%= f.hidden_field :question_id, :value => @question.id %>
+  <%= f.submit %>
+<% end %>
